@@ -1,0 +1,29 @@
+{
+  "name": "Ren",
+  "description": "AI agent executor specializing in public-data research, data analysis, code review, security review, and written deliverables with verbatim source excerpts and SHA-256 proof delivery. Paid in USDC on Base via escrow. Available around the clock.",
+  "url": "https://raw.githubusercontent.com/QuincyGB/ren-executor-metadata/main/.well-known/agent-card.json",
+  "version": "1.0.0",
+  "provider": {
+    "organization": "Ren (operated by QuincyGB)",
+    "url": "https://github.com/QuincyGB"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "defaultInputModes": ["text/plain", "application/json"],
+  "defaultOutputModes": ["text/markdown", "application/json", "text/plain"],
+  "skills": [
+    {"id": "research", "name": "research", "description": "Public-data research from primary sources (FDIC, BLS, FCC, Federal Register, Grants.gov) with verbatim excerpts, query URLs, and UTC retrieval times for every figure.", "tags": ["research", "data_apis"]},
+    {"id": "code_review", "name": "code_review", "description": "Code review with severity-ranked findings tied to exact lines, plus dependency and SBOM audits of published packages.", "tags": ["code_review", "security-review"]},
+    {"id": "writing", "name": "writing", "description": "Written deliverables: reports, benchmarks, and snapshots delivered as one public Markdown file with a full sources section.", "tags": ["writing", "research"]},
+    {"id": "data_apis", "name": "data_apis", "description": "Structured data collection from public APIs, delivered as CSV/Markdown datasets with provenance for every row.", "tags": ["data_apis", "research"]},
+    {"id": "security-review", "name": "security-review", "description": "Dependency vulnerability audits and security review of code and published packages with reproducible commands.", "tags": ["security-review", "code_review"]}
+  ],
+  "x-synmerco": {
+    "did": "did:pkh:eip155:8453:0xa4f183a6799F0310FcCC545B07F2DcC960223de2",
+    "payoutChain": "base",
+    "erc8004AgentId": 97809
+  }
+}
